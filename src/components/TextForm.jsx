@@ -7,41 +7,49 @@ export default function TextForm(props) {
     const HandleOnChange = (event) => {
         // console.log("On change"); 
         setText(event.target.value)
-
     }
 
     const HandleUpChange = () => {
         // console.log("Btn Click");
         let newText = text.toUpperCase();
         setText(newText);
+        props.showAlert("Coverted To UpperCase", "success")
     }
 
     const HandleLowerChange = () => {
         // console.log("Btn Click");
         let newText = text.toLowerCase();
         setText(newText);
+        props.showAlert("Coverted To LowerCase", "success")
+
     }
 
     const HandleSpeak = () => {
         let newText = new SpeechSynthesisUtterance();
         newText.text = text;
         window.speechSynthesis.speak(newText);
+        props.showAlert("Speaking", "success")
+
     }
 
     const HandleClear = () => {
         let newText = "";
         setText(newText);
+        props.showAlert("Text Field Empty", "success")
+
     }
 
     const HandleCopy = () => {
-        var newText = document.getElementById('exampleFormControlTextarea1');
-        newText.select();
-        navigator.clipboard.writeText(newText.value);
+        navigator.clipboard.writeText(text);
+        props.showAlert("Text Copy ClipBord", "success")
+
     }
 
     const HandleRemoveSpace = () => {
         let newText = text.split(/[ ] + /);
         setText(newText.join(" "));
+        props.showAlert("Remove your Text Space", "success")
+
     }
 
     return (
@@ -59,11 +67,11 @@ export default function TextForm(props) {
 
             <div className='container'>
                 <h2>Youe Text Summary</h2>
-                <p>{text.split("").filter((element) => { return element.length !== 0 }).length} Words</p>
+                <p>{text.split(/\s+/).filter((element)=>{return element.length !== 0}).length} Words</p>
                 <p>{text.length} Characters</p>
                 <p>{0.008 * text.split("").filter((element) => { return element.length !== 0 }).length} Reading Time</p>
                 <h3>Preview</h3>
-                <p>{text}</p>
+                <p>{text.length>0 ? text : "Nothing To Preview !"}</p>
             </div>
         </div>
 

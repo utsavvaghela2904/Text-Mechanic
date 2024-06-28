@@ -20,6 +20,7 @@ function App() {
       setAlert(null);
     }, 1500);
   }
+
   const toggleMode = () => {
     if (mode === 'light') {
       setMode('dark')
@@ -37,9 +38,9 @@ function App() {
   }
   return (
     <>
-      <Navbar title="SIT" aboutText="Contact  Us" mode={mode} toggleMode={toggleMode} btnText={btnText} />
+      <Navbar title="Text Mechanic" aboutText="Contact  Us" mode={mode} toggleMode={toggleMode} btnText={btnText} />
       <Alert alert={alert}/>
-      <TextForm heading="Enter Text To Analyse Below" mode={mode} toggleMode={toggleMode} showAlert={showAlert}/>
+      <TextForm heading="Repair Your Text Here" mode={mode} toggleMode={toggleMode} showAlert={showAlert}/>
     </>
   );
 }
