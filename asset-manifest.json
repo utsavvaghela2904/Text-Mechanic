@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Text-Mechanic/static/css/main.6aa64af7.css",
-    "main.js": "/Text-Mechanic/static/js/main.06ffe75d.js",
+    "main.js": "/Text-Mechanic/static/js/main.d96d3fd7.js",
     "static/js/453.55fbde2e.chunk.js": "/Text-Mechanic/static/js/453.55fbde2e.chunk.js",
     "index.html": "/Text-Mechanic/index.html",
     "main.6aa64af7.css.map": "/Text-Mechanic/static/css/main.6aa64af7.css.map",
-    "main.06ffe75d.js.map": "/Text-Mechanic/static/js/main.06ffe75d.js.map",
+    "main.d96d3fd7.js.map": "/Text-Mechanic/static/js/main.d96d3fd7.js.map",
     "453.55fbde2e.chunk.js.map": "/Text-Mechanic/static/js/453.55fbde2e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6aa64af7.css",
-    "static/js/main.06ffe75d.js"
+    "static/js/main.d96d3fd7.js"
   ]
 }
